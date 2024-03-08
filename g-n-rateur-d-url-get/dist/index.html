@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CodePen - Générateur d&#39;URL GET</title>
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <form action="" id="form-get-url-generator">
+      <label>URL de base : </label>
+      <input
+        type="text"
+        name="baseUrl"
+        placeholder="URL de base"
+        value=""
+        style="width: 100%"
+      />
+      <hr />
+      <button type="submit" onclick="addLine(event, table)">Ajouter +</button>
+      <button type="submit" onclick="generate(event)">Générer URL</button>
+      <button type="submit" onclick="generateAndOpen(event)">
+        Générer et ouvrir
+      </button>
+      <button type="submit" onclick="saveMyData(event)">Sauv.</button>
+      <button type="submit" onclick="loadMyData(event)">Charger</button>
+      <hr />
+      <table id="table-form">
+        <tr>
+          <th>Nom paramètre</th>
+          <th>Valeur paramètre</th>
+          <th></th>
+        </tr>
+        <!--
+        <tr id="specimen" class="parameter-row">
+          <td>
+            <input
+              name="parameterName[]"
+              type="text"
+              placeholder="Nom paramètre"
+            />
+          </td>
+          <td>
+            <input
+              name="parameterValue[]"
+              type="text"
+              placeholder="Valeur paramètre"
+            />
+          </td>
+          <td>
+            <button
+              type="submit"
+              class="removeLine"
+              onclick="removeLine(event)"
+            >
+              X
+            </button>
+          </td>
+        </tr>
+        -->
+      </table>
+      <hr />
+      <button type="submit" onclick="addLine(event, table)">Ajouter +</button>
+      <button type="submit" onclick="generate(event)">Générer URL</button>
+      <button type="submit" onclick="generateAndOpen(event)">
+        Générer et ouvrir
+      </button>
+      <button type="submit" onclick="saveMyData(event)">Sauv.</button>
+      <button type="submit" onclick="loadMyData(event)">Charger</button>
+      <br />
+      <textarea
+        name="outputUrl"
+        id="outputUrl"
+        style="width: 100%; margin-top: 12px"
+        rows="10"
+        onclick="select(this)"
+      ></textarea>
+    </form>
+    <!-- partial -->
+    <script src="./script.js"></script>
+  </body>
+</html>
